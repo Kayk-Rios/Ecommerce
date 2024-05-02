@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'arial';
+}
+/*header*/
+.header-inner-constant{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.navbar{
+    background-color: #2c2c2c;
+    padding: 2rem;
+    position: sticky; /* deixa o navbar fixo na topo da tela*/
+    top: 0;/*distancia do topo no max*/
+    box-shadow: 10px 0px 10px  #2c2c2c;/*sombras do navbar*/
+    z-index: 99;/*para que nav bar esteja realmente a cima de tudo*/
+
+}
+.navbar>div{
+    display: flex;
+    align-items: center;/*centralizei no meio da div os items*/
+    justify-content: space-around ;/* via espaçar todos os itens de forma igual*/
+    position: relative;
+}
+.logo{
+    color: blue;
+}
+.logo span{
+    color: white;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 10px;   /* Adicione margem direita para espaçamento entre os itens */
+}
+.nav-icon-container{
+display: flex;
+align-items: center;
+}
+.nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+
+}
+.nav-icon-container img:first-child{
+    margin-right: 1rem ;
+
+}
+nav ul li{
+  color: white;  
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+nav ul li:hover{
+   transform: translateY(-5px);/*faz com que os nomes se movimentaem se passar o curso por cima*/
+   transition: all 0.2s; /*suaviza o curso */
+    font-weight: bold;
+}
+.menu-tutton{
+    display: none;/*fez o menu desaparecer na tela grande*/
+}
+header{
+    background-image: radial-gradient(#fff, #c7c7c7);
+}
+.header-button-side{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+.header-button-side-left{
+    height: 100%;
+    flex-basis: 50%;
+}
+.header-button-side-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+
+}
+.header-button-side-left p{
+line-height:1.5rem ;
+margin-bottom: 1.5rem;
+
+
+}
+.header-button-side-left button{
+    background-color: #0084ff;
+    border: 0;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem    ;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+.header-button-side-left button:hover{
+background-color: #004c94;
+transition: all 0.2s;
+
+}
+
+.header-button-side-right{
+    height: 100%;
+    flex-basis: 40%;
+    align-items: center;
+    justify-content: center;
+}
+.header-button-side-right img{
+    width: 115%;
+}
+/*media query*/
+@media (max-width: 880px ){
+    .logo{
+        font-size: 1.2rem;
+    }
+    .menu-tutton{
+        display: block;/*fez o menu desaparecer na tela grande*/
+    }
+    .header-button-side{
+        flex-direction: column ;
+        width: 70%;
+        text-align: center;
+        padding-top: 5rem;
+        padding-left: 6rem;
+
+    
+    }
+    nav{
+        position: absolute;
+        background-color: #2c2c2c;/*sobscrevel o lodo kayk com a tag position absolute e mudando o bacground-colo*/
+       width: 100%;
+       top: 62px;/*colocou o nav abaixo container aparecendo no header*/
+        display: none;
+
+    }
+    .show-menu nav{/*criei a clase fiz o css e apaguei a classe la  e  desapareceu*/
+        display: block;
+
+
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem ;
+
+    }
+
+
+}
+
+/*header*/
+
+/* Main content*/
+main{
+    background-color: #ebebeb;
+
+
+}
+
+.gray-background{
+background-color:  gray;
+
+}
+.page_inner-content{
+max-width: 1280px ;
+margin: 0 auto;
+}
+.cols{
+    display: grid;
+     justify-content: space-evenly;
+    padding: 4rem 1rem;
+
+}
+.cols-3{
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 3px;
+}
+.cols-4 img{
+    width: 100%;
+
+}
+.cols-4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.cols>*{
+cursor: pointer;
+transition: all 0.2s;
+
+
+}
+.cols>*:hover{
+    transform: translateY(-5px);
+
+
+}
+.section-tittle{
+ text-align: center;
+ padding-top: 4rem;
+ font-size: 1.8rem;
+
+}
+.subtittle-undeerline{
+width: 100px;
+background: #0084ff;
+margin: 8px auto 0 auto  ;
+border-radius: 9999px;
+
+}
+.product{
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.product-name{
+    font-weight: 600 ;
+    margin-top: 0.4rem;
+
+}
+.rate{
+    color: #004c94;
+    font-size: 1.3rem;
+
+}
+.product-price span{
+    font-weight: 700 ;
+
+}
+.exclusive-container{
+    background-color: rgb(51, 45, 45);
+    color: #fff ;
+    flex-direction: row-reverse;
+    padding: 5rem 1rem ;
+    width: 100%;
+}
+.exclusive-container img{
+    max-width: 500px;
+}
+
+/* Media query */
+
+@media(max-width:800px){
+    .section-tittle{
+        font-size: 1rem;
+    }
+    .cols-3{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cols-4{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    .product-name, .product-price{
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+    .exclusive-container{
+        flex-direction: column-reverse;
+
+
+    }
+    .exclusive-container img{
+        margin-bottom: 3rem ;
+
+
+    }
+
+}
+
+/* main content */
+
